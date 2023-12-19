@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
+    "prettier": "prettier --write ./**/*.{html,vue,ts,cjs,json,md}",
+    "eslint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
     "preview": "vite preview"
   },
   "dependencies": {
