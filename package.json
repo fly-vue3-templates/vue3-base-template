@@ -8,6 +8,7 @@
     "build": "vue-tsc && vite build",
     "prettier": "prettier --write ./**/*.{html,vue,ts,cjs,json,md}",
     "eslint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+    "stylelint": "stylelint ./**/*.{css,scss,vue,html} --fix",
     "preview": "vite preview"
   },
   "dependencies": {
