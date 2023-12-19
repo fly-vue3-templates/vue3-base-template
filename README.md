@@ -16,3 +16,10 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
    1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
    2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
 2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+
+## issue
+
+after run stylelint, 出现下图错误。
+![stylelint-error](./src/shortcuts/stylelint-error.jpg)
+可能是因为`stylelint-config-prettier`与`stylelint`版本不兼容导致的，如下图。
+![stylelint-conflict](./src/shortcuts/stylelint-conflict.png)
