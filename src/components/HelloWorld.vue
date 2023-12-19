@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import '../test/index'
 import { ref } from 'vue'
+// import { fun } from '../test/import-sort'
 
 defineProps<{ msg: string }>()
 
