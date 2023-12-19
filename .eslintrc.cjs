@@ -56,6 +56,8 @@ module.exports = {
     'no-console': ['off'],
     // 'no-unused-vars': ['off'],
     // '@typescript-eslint/no-unused-vars': ['off'],
+    // 解决vite.config.ts报错问题
+    'import/no-extraneous-dependencies': 'off',
   },
   // eslint-import-resolver-typescript 插件，@see https://www.npmjs.com/package/eslint-import-resolver-typescript
   settings: {
