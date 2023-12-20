@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.7.0",
+    "dayjs": "^1.11.10",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
     "vue": "^3.3.11"

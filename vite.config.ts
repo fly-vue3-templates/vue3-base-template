@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import path from 'node:path'
 import { defineConfig, loadEnv } from 'vite'
+import dayjs from 'dayjs'
 import vue from '@vitejs/plugin-vue'
 import eslintPlugin from 'vite-plugin-eslint'
 import stylelintPlugin from 'vite-plugin-stylelint'
@@ -20,6 +21,17 @@ import viteCompression from 'vite-plugin-compression'
 import viteImagemin from 'vite-plugin-imagemin'
 import vueSetupExtend from 'vite-plugin-vue-setup-extend'
 
+const htmlPlugin = (title: string) => {
+  return {
+    name: 'html-transform',
+    transformIndexHtml(html) {
+      return html
+        .replace(/<title>(.*?)<\/title>/, `<title>${title}</title>`)
+        .replace('%BUILD_DATE%', dayjs().format('YYYY-MM-DD HH:mm:ss'))
+    },
+  }
+}
+
 // https://vitejs.dev/config/
 export default ({ mode }) => {
   // mode: 区分生产环境还是开发环境
@@ -30,6 +42,7 @@ export default ({ mode }) => {
   return defineConfig({
     plugins: [
       vue(),
+      htmlPlugin(env.VITE_APP_TITLE),
       eslintPlugin(),
       stylelintPlugin({ fix: true }),
       svgLoader(),
