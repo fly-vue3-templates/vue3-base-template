@@ -97,4 +97,18 @@ export default defineConfig({
       '@': path.join(process.cwd(), './src'),
     },
   },
+  server: {
+    host: '0.0.0.0',
+    hmr: true,
+    port: 7777,
+    // 自定义代理规则
+    proxy: {
+      // 选项写法
+      '/api': {
+        target: 'http://localhost:6666',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
 })

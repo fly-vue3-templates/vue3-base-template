@@ -60,6 +60,7 @@ module.exports = {
     // 解决vite.config.ts报错问题
     'import/no-extraneous-dependencies': 'off',
     'no-plusplus': 'off',
+    'no-shadow': 'off',
   },
   // eslint-import-resolver-typescript 插件，@see https://www.npmjs.com/package/eslint-import-resolver-typescript
   settings: {
