@@ -121,7 +121,7 @@ export default ({ mode }) => {
     server: {
       host: '0.0.0.0',
       hmr: true,
-      port: Number.parseInt(env.VITE_SERVER_PORT, 10),
+      port: Number.parseInt(env.VITE_APP_PORT, 10),
       // 自定义代理规则
       proxy: {
         // 选项写法
