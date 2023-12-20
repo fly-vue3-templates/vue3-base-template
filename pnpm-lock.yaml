@@ -55,9 +55,6 @@ devDependencies:
   stylelint:
     specifier: ^16.0.2
     version: 16.0.2(typescript@5.3.3)
-  stylelint-config-prettier:
-    specifier: ^9.0.5
-    version: 9.0.5(stylelint@16.0.2)
   stylelint-config-recess-order:
     specifier: ^4.4.0
     version: 4.4.0(stylelint@16.0.2)
@@ -2960,16 +2957,6 @@ packages:
       stylelint: '>=14.0.0'
     dependencies:
       postcss-html: 1.5.0
-      stylelint: 16.0.2(typescript@5.3.3)
-    dev: true
-
-  /stylelint-config-prettier@9.0.5(stylelint@16.0.2):
-    resolution: {integrity: sha512-U44lELgLZhbAD/xy/vncZ2Pq8sh2TnpiPvo38Ifg9+zeioR+LAkHu0i6YORIOxFafZoVg0xqQwex6e6F25S5XA==}
-    engines: {node: '>= 12'}
-    hasBin: true
-    peerDependencies:
-      stylelint: '>= 11.x < 15'
-    dependencies:
       stylelint: 16.0.2(typescript@5.3.3)
     dev: true
 

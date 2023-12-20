@@ -23,3 +23,6 @@ after run stylelint, 出现下图错误。
 ![stylelint-error](./src/shortcuts/stylelint-error.jpg)
 可能是因为`stylelint-config-prettier`与`stylelint`版本不兼容导致的，如下图。
 ![stylelint-conflict](./src/shortcuts/stylelint-conflict.png)
+
+原因找到了，需要移除`stylelint-config-prettier`, @see [stylelint-config-prettier](https://github.com/prettier/stylelint-config-prettier)，里面提到了，如果是stylelint15及以上，这个插件是不需要的。
+pnpm un stylelint-config-prettier + 重启vscode后，标红的全部没了，good！
