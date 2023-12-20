@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import HelloWorld from '@/components/HelloWorld.vue'
+import { useCountStore } from '@/store/count'
+
+const countStore = useCountStore()
 </script>
 
 <template>
@@ -10,6 +13,8 @@ import HelloWorld from '@/components/HelloWorld.vue'
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
+    Demo Count: {{ countStore.count }}
+    <button @click="countStore.increment">新增</button>
   </div>
   <HelloWorld msg="Vite + Vue" />
 </template>
