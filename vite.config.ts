@@ -13,6 +13,7 @@ import Components from 'unplugin-vue-components/vite'
 // HeadlessUiResolver,
 // ElementUiResolver
 import {} from 'unplugin-vue-components/resolvers'
+import AutoImport from 'unplugin-auto-import/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -40,6 +41,10 @@ export default defineConfig({
         // HeadlessUiResolver(),
         // ElementUiResolver()
       ],
+    }),
+    AutoImport({
+      imports: ['vue'],
+      dts: 'src/auto-import.d.ts',
     }),
   ],
   resolve: {
