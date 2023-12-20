@@ -17,6 +17,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import viteCompression from 'vite-plugin-compression'
 import viteImagemin from 'vite-plugin-imagemin'
+import vueSetupExtend from 'vite-plugin-vue-setup-extend'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -31,6 +32,7 @@ export default defineConfig({
       // 通过这个插件，在修改vite.config.js文件则不需要重新运行也生效配置
       restart: ['vite.config.js'],
     }),
+    vueSetupExtend(),
     // 原先引用组件的时候需要在目标文件里面import相关组件，现在就可以直接使用无需在目标文件import了
     Components({
       dirs: ['src/components'], // 目标文件夹
