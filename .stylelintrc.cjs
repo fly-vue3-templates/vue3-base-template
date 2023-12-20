@@ -4,7 +4,7 @@ module.exports = {
   root: true,
   extends: [
     'stylelint-config-standard',
-    'stylelint-config-standard-scss',
+    'stylelint-config-standard-scss', // tips: 本插件也可以替换成 stylelint-config-recommended-scss
     'stylelint-config-recommended-vue/scss',
     'stylelint-config-html/vue',
     'stylelint-config-recess-order',

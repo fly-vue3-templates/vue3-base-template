@@ -10,7 +10,7 @@ module.exports = {
     'plugin:vue/vue3-essential',
     // eslint-plugin-import 插件， @see https://www.npmjs.com/package/eslint-plugin-import
     'plugin:import/recommended',
-    // eslint-config-airbnb-base 插件
+    // eslint-config-airbnb-base 插件， tips: 本插件也可以替换成 eslint-config-standard
     'airbnb-base',
     // 1. 接入 prettier 的规则
     'prettier',
