@@ -16,10 +16,10 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <style scoped>
 .logo {
-  padding: 1.5em;
   height: 6em;
-  will-change: filter;
+  padding: 1.5em;
   transition: filter 300ms;
+  will-change: filter;
 }
 
 .logo:hover {
