@@ -15,6 +15,7 @@ import Components from 'unplugin-vue-components/vite'
 import {} from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import viteCompression from 'vite-plugin-compression'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -53,6 +54,7 @@ export default defineConfig({
       // 指定symbolId格式
       symbolId: 'icon-[dir]-[name]',
     }),
+    viteCompression(), // 会多出一些.gz文件，如xxx.js.gz
   ],
   resolve: {
     alias: {
