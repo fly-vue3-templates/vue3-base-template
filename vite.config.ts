@@ -57,7 +57,8 @@ export default defineConfig({
       // 指定symbolId格式
       symbolId: 'icon-[dir]-[name]',
     }),
-    viteCompression(), // 会多出一些.gz文件，如xxx.js.gz
+    viteCompression(), // 会多出一些.gz文件，如xxx.js.gz，这里默认是不会删除xxx.js文件的，如果想删除也可以增加配置
+    // 这个图片压缩插件比较耗时，希望仅在生产环境使用
     viteImagemin({
       gifsicle: {
         // gif图片压缩
