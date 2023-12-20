@@ -37,7 +37,7 @@ export default ({ mode }) => {
   // mode: 区分生产环境还是开发环境
   // process.cwd(): 获取当前文件的目录跟地址
   // loadEnv(): 返回当前环境env文件中额外定义的变量
-  const env = loadEnv(mode, process.cwd())
+  const env = loadEnv(mode, path.resolve(process.cwd(), 'env'))
   console.log(env)
   return defineConfig({
     plugins: [
