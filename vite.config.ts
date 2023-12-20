@@ -25,7 +25,8 @@ export default ({ mode }) => {
   // mode: 区分生产环境还是开发环境
   // process.cwd(): 获取当前文件的目录跟地址
   // loadEnv(): 返回当前环境env文件中额外定义的变量
-  console.log(loadEnv(mode, process.cwd())) // => { VITE_SOME_KEY: '100', VITE_APP_TITLE: '' }
+  const env = loadEnv(mode, process.cwd())
+  console.log(env)
   return defineConfig({
     plugins: [
       vue(),
@@ -107,7 +108,7 @@ export default ({ mode }) => {
     server: {
       host: '0.0.0.0',
       hmr: true,
-      port: 7777,
+      port: Number.parseInt(env.VITE_SERVER_PORT, 10),
       // 自定义代理规则
       proxy: {
         // 选项写法
