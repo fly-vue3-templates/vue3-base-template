@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import HelloWorld from '@/components/HelloWorld.vue'
 import { useCountStore } from '@/store/count'
+import SvgComp from './assets/vue.svg'
 
 const countStore = useCountStore()
 </script>
 
 <template>
   <div>
+    <SvgComp />
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
