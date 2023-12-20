@@ -124,6 +124,9 @@ devDependencies:
   vite-svg-loader:
     specifier: ^5.1.0
     version: 5.1.0(vue@3.3.12)
+  vue-global-api:
+    specifier: ^0.4.1
+    version: 0.4.1(vue@3.3.12)
   vue-tsc:
     specifier: ^1.8.25
     version: 1.8.25(typescript@5.3.3)
@@ -1961,6 +1964,10 @@ packages:
       eslint: '>=7.0.0'
     dependencies:
       eslint: 8.56.0
+    dev: true
+
+  /eslint-config-vue-global-api@0.4.1:
+    resolution: {integrity: sha512-mJTiKBGLe1FXmEifYzCQzUTBpFv8OtfYzP6PAOuVRf+3hkGLMeiDh4bVzZEaJfdExtc8mPw9vp35YSLhwTselQ==}
     dev: true
 
   /eslint-import-resolver-node@0.3.9:
@@ -4675,7 +4682,6 @@ packages:
         optional: true
     dependencies:
       vue: 3.3.12(typescript@5.3.3)
-    dev: false
 
   /vue-eslint-parser@9.3.2(eslint@8.56.0):
     resolution: {integrity: sha512-q7tWyCVaV9f8iQyIA5Mkj/S6AoJ9KBN8IeUSf3XEmBrOtxOZnfTg5s4KClbZBCK3GtnT/+RyCLZyDHuZwTuBjg==}
@@ -4693,6 +4699,16 @@ packages:
       semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vue-global-api@0.4.1(vue@3.3.12):
+    resolution: {integrity: sha512-283vpYOhVHJCpMkjNVEwZdgaAb+Y93zFaXGAWTI378MLoNuwQydjD/BAy1e81QYEmyA+JbxqcmMZVWcM9rbriw==}
+    dependencies:
+      eslint-config-vue-global-api: 0.4.1
+      vue-demi: 0.14.6(vue@3.3.12)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
     dev: true
 
   /vue-template-compiler@2.7.15:
