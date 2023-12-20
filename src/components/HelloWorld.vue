@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import BigImg from '@/assets/img/bg-1.png'
+
 defineProps<{ msg: string }>()
 
 const count = ref(0)
@@ -6,7 +8,7 @@ const count = ref(0)
 
 <template>
   <h1>{{ msg }}</h1>
-
+  <img :src="BigImg" alt="" width="200" />
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
