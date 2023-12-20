@@ -4,6 +4,8 @@ import { useCountStore } from '@/store/count'
 import { useDebounceFn } from '@vueuse/core'
 import SvgComp from './assets/vue.svg'
 
+console.log(import.meta.env)
+
 const updated = ref(0)
 const clicked = ref(0)
 const debouncedFn = useDebounceFn(
