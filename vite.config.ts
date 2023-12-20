@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import eslintPlugin from 'vite-plugin-eslint'
+import stylelintPlugin from 'vite-plugin-stylelint'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,5 +10,6 @@ export default defineConfig({
     eslintPlugin({
       include: ['src/**/*.ts', 'src/**/*.vue', 'src/*.ts', 'src/*.vue'],
     }),
+    stylelintPlugin({ fix: true }),
   ],
 })
