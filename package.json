@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "prettier": "prettier --write ./**/*.{html,vue,ts,cjs,json,md}",
-    "eslint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
-    "stylelint": "stylelint ./**/*.{css,scss,vue,html} --fix",
+    "prepare": "husky install",
+    "lint:prettier": "prettier --write ./**/*.{html,vue,ts,cjs,json,md}",
+    "lint:eslint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+    "lint:stylelint": "stylelint ./**/*.{css,scss,vue,html} --fix",
+    "lint": "npm run lint:prettier && npm run lint:eslint && npm run lint:stylelint",
     "preview": "vite preview"
   },
   "engines": {
@@ -28,6 +30,7 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-vue": "^9.19.2",
+    "husky": "^8.0.3",
     "postcss": "^8.4.32",
     "postcss-html": "^1.5.0",
     "postcss-scss": "^4.0.9",
