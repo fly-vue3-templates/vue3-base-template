@@ -46,6 +46,8 @@ const countStore = useCountStore()
       unocss Button
     </button>
     <div class="hover:(bg-gray-400 font-medium) font-(light mono)">测试 unocss</div>
+    <!-- Sun in light mode, Moon in dark mode, from Carbon -->
+    <button class="i-carbon-sun dark:i-carbon-moon" />
   </div>
   <HelloWorld msg="Vite + Vue" />
 </template>
