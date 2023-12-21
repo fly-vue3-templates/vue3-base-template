@@ -21,6 +21,7 @@ import viteCompression from 'vite-plugin-compression'
 import viteImagemin from 'vite-plugin-imagemin'
 import vueSetupExtend from 'vite-plugin-vue-setup-extend'
 import UnoCSS from 'unocss/vite'
+import autoprefixer from 'autoprefixer'
 
 const htmlPlugin = (title: string) => {
   return {
@@ -115,6 +116,17 @@ export default ({ mode }) => {
         },
       }),
     ],
+    css: {
+      postcss: {
+        plugins: [
+          autoprefixer({
+            // 指定目标浏览器
+            overrideBrowserslist: ['> 1%', 'last 2 versions'],
+          }),
+        ],
+      },
+    },
+
     resolve: {
       alias: {
         '@': path.join(process.cwd(), './src'),

@@ -55,5 +55,6 @@ const countStore = useCountStore()
 <style scoped>
 .flex {
   display: flex;
+  background-clip: text;
 }
 </style>
