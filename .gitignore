@@ -26,4 +26,9 @@ dist-ssr
 *.sw?
 
 .stylelintcache
+# rollup-plugin-visualizer 生成的分析文件
 stats.html
+# unplugin-auto-import 生成的类型文件
+auto-import.d.ts
+# unplugin-vue-components 生成的类型文件
+components.d.ts
