@@ -20,6 +20,7 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import viteCompression from 'vite-plugin-compression'
 import viteImagemin from 'vite-plugin-imagemin'
 import vueSetupExtend from 'vite-plugin-vue-setup-extend'
+import UnoCSS from 'unocss/vite'
 
 const htmlPlugin = (title: string) => {
   return {
@@ -42,6 +43,7 @@ export default ({ mode }) => {
   return defineConfig({
     plugins: [
       vue(),
+      UnoCSS(),
       htmlPlugin(env.VITE_APP_TITLE),
       eslintPlugin(),
       stylelintPlugin({ fix: true }),

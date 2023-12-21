@@ -32,10 +32,20 @@ const countStore = useCountStore()
     <p>Button clicked: {{ clicked }}</p>
     <p>Event handler called: {{ updated }}</p>
     <hr />
-    <div class="flex">
+    <div class="flex text-red-500">
       Demo Count: {{ countStore.count }}
       <button @click="countStore.increment">新增</button>
     </div>
+    <button
+      bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
+      text="sm white"
+      font="mono light"
+      p="y-2 x-4"
+      border="2 rounded blue-200"
+    >
+      unocss Button
+    </button>
+    <div class="hover:(bg-gray-400 font-medium) font-(light mono)">测试 unocss</div>
   </div>
   <HelloWorld msg="Vite + Vue" />
 </template>
