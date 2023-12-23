@@ -140,5 +140,14 @@ export default ({ mode }) => {
         },
       },
     },
+    build: {
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: env.VITE_DELETE_CONSOLE === 'true',
+          drop_debugger: env.VITE_DELETE_CONSOLE === 'true',
+        },
+      },
+    },
   })
 }
