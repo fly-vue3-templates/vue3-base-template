@@ -32,10 +32,10 @@ const countStore = useCountStore()
     <p>Button clicked: {{ clicked }}</p>
     <p>Event handler called: {{ updated }}</p>
     <hr />
-    <div class="flex text-red-500">
+    <view class="flex justify-center items-center text-blue-500">
       Demo Count: {{ countStore.count }}
-      <button @click="countStore.increment">新增</button>
-    </div>
+      <button class="ml-2" @click="countStore.increment">新增</button>
+    </view>
     <button
       bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
       text="sm white"
