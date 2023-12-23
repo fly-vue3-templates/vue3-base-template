@@ -22,11 +22,13 @@ import vueSetupExtend from 'vite-plugin-vue-setup-extend'
 import UnoCSS from 'unocss/vite'
 import autoprefixer from 'autoprefixer'
 
-const htmlPlugin = () => {
+const htmlPlugin = (title: string) => {
   return {
     name: 'html-transform',
     transformIndexHtml(html) {
-      return html.replace('%BUILD_DATE%', dayjs().format('YYYY-MM-DD HH:mm:ss'))
+      return html
+        .replace(/<title>(.*?)<\/title>/, `<title>${title}</title>`)
+        .replace('%BUILD_DATE%', dayjs().format('YYYY-MM-DD HH:mm:ss'))
     },
   }
 }
@@ -42,7 +44,7 @@ export default ({ mode }) => {
     plugins: [
       vue(),
       UnoCSS(),
-      htmlPlugin(),
+      htmlPlugin(env.VITE_APP_TITLE),
       eslintPlugin(),
       stylelintPlugin({ fix: true }),
       svgLoader(),
